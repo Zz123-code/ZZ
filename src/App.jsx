@@ -11,7 +11,7 @@ function App() {
     const [penColor, setPenColor] = useState('#ff0000');
     const [penWidth, setPenWidth] = useState(3);
 
-    // AI功能状态（直接设置为加载完成，无需外部模型）
+    // AI功能状态（直接设置为加载完成，不需外部模型）
     const [aiStatus] = useState('加载完成'); // 关键修改：固定为加载完成
 
     // 2. 画布初始化与样式更新
