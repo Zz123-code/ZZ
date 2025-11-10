@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>埋点SDK测试</title>
+    <!-- 引入打包后的SDK（路径确保正确） -->
+    <script src="./dist/track-sdk.js"></script>
+</head>
+<body>
+<h1>埋点SDK测试页面</h1>
+<!-- 测试元素 -->
+<button class="test-btn">点击测试按钮</button>
+<a href="https://baidu.com" target="_blank">跳转百度（测试页面离开）</a>
+<input type="password" placeholder="密码输入框（不采集）">
+
+<script>
+    // 调用 SDK 初始化方法（确保配置正确）
+    TrackSDK.init({
+        reportUrl:  "https://httpbin.org/post ",// 替换为实际上报地址
+        reportDelay: 3000, // 可选：修改上报间隔为3秒
+        isStealth: true
+    });
+</script>
+</body>
+</html>
